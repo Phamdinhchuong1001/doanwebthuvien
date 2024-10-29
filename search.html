@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>HUFLIT libary</title>
+     <link rel="stylesheet" href="../css/style.css">
+     <!---------------------------------------------------------------header section--------------------------------------------------------->
+    </head>
+    <body>
+        <div id="header">
+            <a href="homepage.php" class="logo" id="home">
+              <img src="../image/index/logohuflit.png"></a>
+            <ul class="menu">
+                <li>
+                <a href="homepage.php">TRANG CHỦ</a>
+                </li>
+                <li> 
+                <a href="#">SÁCH GIÁO TRÌNH</a>
+                <div class="dropdown">
+                    <a href="#newcolection">Giáo trình đại cương</a>
+                    <a href="#">Giáo trình phổ biến</a>
+                    <a href="#">Giáo trình</a>
+                    <a href="#">Giáo trình</a>
+                </div>
+                </li>
+                <li>
+                    <a href="SACHTC.html">TRA CỨU</a>
+                    <div class="dropdown">
+                        <a href="#">Tra cứu Opac</a>
+                        <a href="#">Tra cứu môn học</a>
+                        <a href="#">Tra cứu tài liệu nội sinh</a>
+                        <a href="#">Tra cứu luận văn</a>    
+                </div>
+                </li>
+                <li>
+                    <a href="SACHTK.html">SÁCH THAM KHẢO</a>
+                    <div class="dropdown">
+                        <a href="#">Sách ...</a>
+                        <a href="#">Sách ...</a>
+                        <a href="#">Sách ...</a>
+                        <a href="#">Sách ...</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="icons">
+                <a href="search.html" class="fas fa-search"></a>
+                <a href="cart.html" class="fas fa-shopping-cart"></a>
+                <a href="index.php" class="fas fa-user"></a>
+            </div>
+        </div>
+     <!-------------------------------------------------------------------end------------------------------------------------------------------->
+         
+     <!-------------------------------------------------------------------search------------------------------------------------------------------->
+     <div id="search">
+     <div id="search-box">
+        <input type="text" id="search-text" placeholder="Bạn muốn tìm sản phẩm nào?"
+         required>
+         <button id="search-btn">
+            <i class="fa fa-search"></i>
+        </button>
+     </div>
+    </div> 
+ 
+ <!----------------------------------------------------------------end------------------------------------------------------------------->
+     <!-----------------------------------------------------------------footer----------------------------------------------------------------> 
+     <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Trường Đại học Ngoại ngữ - Tin học TP. Hồ Chí Minh (HUFLIT)</h4>
+                    <ul>
+                        <li><a href="#">Đc: 828 Sư Vạn Hạnh, Phường 13, Quận 10, TP. HCM</a></li>
+                        <li><a href="#">SĐt: (028) 3863 2052 - (028) 3862 9232</a></li>
+                        <li><a href="#">Email: contact@huflit.edu.vn</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-time">
+                    <h4>GIỜ MỞ CỬA</h4>
+                    <ul>
+                        <li><a href="#">Cơ sở Sư Vạn Hạnh</a></li>
+                        <li><a href="#">Thứ 2 - 6: 8g00 - 20g00</a></li>
+                        <li><a href="#">Thứ 7: 8g00 - 17g00</a></li>
+                        <li><a href="#">Cơ sở Hóc Môn</a></li>
+                        <li><a href="#">Thứ 2 - 6: 07g30 - 18g00</a></li>
+                        <li><a href="#">Thứ 7: 7g30 - 16g00</a></li>
+                        <li><a href="#">(Nghỉ Chủ nhật & Ngày lễ)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col-link">
+                    <h4>Theo dõi chúng tôi</h4>
+                    <div class="social-links"> 
+                        <a href="https://www.facebook.com/huflit.edu.vn"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@huflit.official?lang=vi-VN"><i class="fab fa-tiktok"></i></a>
+                        <a href="http://lib.huflit.edu.vn/"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+   <!-----------------------------------------------------------------------end----------------------------------------------------->
+
+    
+
+
+   <style>
+#search{
+	width: 100%;
+	height: 600px;
+    padding-top: 16rem;
+    text-align: center;
+    padding-left: 34rem;
+}
+
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background:linear-gradient(#141e30, #243b55);
+    }
+
+    #search-box{
+        background:#fff;
+        border-radius: 60px;
+        width: 25rem;
+        text-align: center;
+    }
+    #search-text{
+        border-radius: 30px;
+    }
+    #search-box #search-text{
+        border: none;
+        outline: none;
+        background: #fff;
+        font-size: 13px;
+        width: 0;
+        padding: 10px;
+        transition: all 0.25s ease-in-out;
+        margin: 10px;
+    }
+
+    #search-box #search-text, #search-box #search-text:valid{
+        width: 300px;
+        padding: 20px;
+    }
+
+    #search-box #search-btn{
+        background-color:#fff;
+        cursor: pointer;
+        border: none;
+        padding: 10px 20px 10px 0px;
+        border-radius: 50px;
+        font-size: 18px;
+   
+    }
+</style>
+</body>
+</html> 
