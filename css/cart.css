@@ -20,7 +20,7 @@ main {
     margin: auto;
     padding: 0;
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 .cart-item {
     display: flex;

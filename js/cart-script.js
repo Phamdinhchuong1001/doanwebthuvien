@@ -44,6 +44,7 @@ function renderCart() {
                 <div class="remove-btn" onclick="removeItem(${index})"><i class="fa fa-trash" aria-hidden="true"></i></div>
             </div>
         `;
+
         cartContainer.appendChild(itemElement);
     });
 }
