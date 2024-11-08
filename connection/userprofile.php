@@ -1,3 +1,10 @@
+<?php
+session_start();
+include("connect.php");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +54,6 @@
         <div class="icons">
             <a href="search.html" class="fas fa-search"></a>
             <a href="cart.html" class="fas fa-shopping-cart"></a>
-                <a href="userprofile.html" class="fas fa-user"></a>  
         </div>
     </div>
     
@@ -55,52 +61,119 @@
         <div class="profile-header">
             <div class="profile-image">CP</div>
             <div class="profile-info">
-                <div class="profile-name">Chương Phạm</div>
-                <div class="profile-title">MSSV: 22DH110433</div>
-                <div class="profile-title">Khoa: Công nghệ thông tin</div>
-                <div class="profile-title">Khóa: K28</div>
+                <div class="profile-name">
+                <?php 
+                     if(isset($_SESSION['email'])){
+                        $email=$_SESSION['email'];
+                         $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
+                      while($row=mysqli_fetch_array($query)){
+                          echo $row['firstName'].' '.$row['lastName'];
+                          }
+                      }
+                 ?>
+                </div>
+                <div class="profile-title">
+                <?php 
+                     if(isset($_SESSION['email'])){
+                        $email=$_SESSION['email'];
+                         $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
+                      while($row=mysqli_fetch_array($query)){
+                          echo $row['mssv'];
+                          }
+                      }
+                 ?>
+                </div>
+                <div class="profile-title">
+                                    <?php 
+                     if(isset($_SESSION['email'])){
+                        $email=$_SESSION['email'];
+                         $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
+                      while($row=mysqli_fetch_array($query)){
+                          echo $row['nganh'];
+                          }
+                      }
+                 ?>
+                </div>
             </div>
         </div>
         <div class="tabs">
-            <div class="tab active">Cập nhật tài khoản</div>
+            <div class="tab active">Thông tin sinh viên</div>
         </div>
         <form>
             <div class="form-grid">
                 <div class="form-group">
-                    <label>First Name</label>
-                    <input type="text" value="Chương">
+                    <label>Họ</label>
+                    <?php 
+                     if(isset($_SESSION['email'])){
+                        $email=$_SESSION['email'];
+                         $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
+                      while($row=mysqli_fetch_array($query)){
+                          echo $row['firstName'];
+                          }
+                      }
+                 ?>
                 </div>
                 <div class="form-group">
-                    <label>Last Name</label>
-                    <input type="text" value="Phạm">
+                    <label>Tên</label>
+                    <?php 
+                     if(isset($_SESSION['email'])){
+                        $email=$_SESSION['email'];
+                         $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
+                      while($row=mysqli_fetch_array($query)){
+                          echo $row['lastName'];
+                          }
+                      }
+                 ?>
                 </div>
                 <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" value="0819009239">
+                    <label>Mã số sinh viên</label>
+                    <?php 
+                     if(isset($_SESSION['email'])){
+                        $email=$_SESSION['email'];
+                         $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
+                      while($row=mysqli_fetch_array($query)){
+                          echo $row['mssv'];
+                          }
+                      }
+                 ?>
                 </div>
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="email" value="chuongpham10012004@gmail.com">
+                    <?php 
+                     if(isset($_SESSION['email'])){
+                        $email=$_SESSION['email'];
+                         $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
+                      while($row=mysqli_fetch_array($query)){
+                          echo $row['email'];
+                          }
+                      }
+                 ?>
                 </div>
                 <div class="form-group">
                     <label>Ngành học</label>
-                    <select>
-                        <option selected>Công nghệ thông tin</option>
-                        <option>Ngôn ngữ anh</option>
-                        <option>Quản trị kinh doanh</option>
-                        <option>Du lịch khách sạn</option>
-                    </select>
+                    <?php 
+                     if(isset($_SESSION['email'])){
+                        $email=$_SESSION['email'];
+                         $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
+                      while($row=mysqli_fetch_array($query)){
+                          echo $row['nganh'];
+                          }
+                      }
+                 ?>
                 </div>
                 <div class="form-group">
                     <label>Khóa</label>
-                    <select>
-                        <option selected>k27</option>
-                        <option>k28</option>
-                        <option>k29</option>
-                    </select>
+                    <?php 
+                     if(isset($_SESSION['email'])){
+                        $email=$_SESSION['email'];
+                         $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
+                      while($row=mysqli_fetch_array($query)){
+                          echo $row['khoa'];
+                          }
+                      }
+                 ?>
                 </div>
             </div>
-            <button type="submit" class="update-button">Cập nhật</button>
             <button class="update-button">
                 <a href="logout.php">Đăng xuất</a>
             </button>
