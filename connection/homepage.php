@@ -40,7 +40,7 @@ include("connect.php");
         <div class="icons">
             <a href="search.html" class="fas fa-search"></a>
             <a href="cart.html" class="fas fa-shopping-cart"></a>
-                <a href="userprofile.html" class="fas fa-user"></a>  
+                <a href="userprofile.php" class="fas fa-user"></a>  
         </div>
     </div>
      <!-------------------------------------------------------------------end------------------------------------------------------------------->

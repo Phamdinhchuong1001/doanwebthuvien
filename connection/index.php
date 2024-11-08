@@ -22,6 +22,21 @@
             <label for="lName">Last Name</label>
         </div>
         <div class="input-group">
+        <i class="fa-solid fa-book"></i>
+            <input name="nganh" id="nganh" placeholder="nganh" required>
+            <label for="nganh">Ngành học</label>
+        </div>
+        <div class="input-group">
+            <i class="fa-solid fa-pencil"></i>
+            <input name="khoa" id="khoa" placeholder="khoa" required>
+            <label for="khoa">khóa</label>
+        </div>
+        <div class="input-group">
+        <i class="fa-solid fa-user-pen"></i>
+            <input type="text" name="mssv" id="mssv" placeholder="mssv" required>
+            <label for="mssv">Mã sinh viên</label>
+        </div>
+        <div class="input-group">
             <i class="fas fa-envelope"></i>
             <input type="email" name="email" id="email" placeholder="Email" required>
             <label for="email">Email</label>
