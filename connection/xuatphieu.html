@@ -48,7 +48,43 @@
         </div>
     </div>
 
-    
+
+
+
+    <div class="container123">
+        <h1>Phiếu Mượn Sách</h1>
+        <form id="borrowForm">
+            <div class="form-group">
+                <label for="name">Họ và Tên:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Mã số sinh viên:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="bookCode">Tên sách:</label>
+                <input type="text" id="bookCode" name="bookCode" required>
+            </div>
+            <div class="form-group">
+                <label for="book">Ngày mượn:</label>
+                <input type="text" id="book" name="book" required>
+            </div>
+            <div class="form-group">
+                <label for="borrowDate">Ngày trả:</label>
+                <input type="date" id="borrowDate" name="borrowDate" required>
+            </div>
+            <div class="form-group">
+                <label for="returnDate">Return Date:</label>
+                <input type="date" id="returnDate" name="returnDate" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+        <button id="printButton" style="display: none;" onclick="printReceipt()">Print Receipt</button>
+    </div>
+
+
     
     <div id="footer">
         <div class="container">
@@ -91,4 +127,76 @@
 
 <style>
 
+
+.container123 {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    border-top: 5px solid #007BFF; /* Thêm màu sắc cho viền trên của container */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #007BFF; /* Thêm màu sắc cho tiêu đề */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    color: #c67d42 ;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #c67d42; /* Màu sắc cho label */
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    transition: border-color 0.3s; /* Thêm hiệu ứng chuyển tiếp cho border */
+}
+
+input:focus {
+    border-color: #007BFF; /* Thay đổi màu viền khi focus */
+}
+
+button {
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Thêm hiệu ứng chuyển tiếp cho background */
+}
+
+button:hover {
+    background: #0056b3; /* Màu sắc khi hover */
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #333; /* Màu sắc cho kết quả */
+}
+
+#result p {
+    margin: 10px 0;
+}
 </style>
