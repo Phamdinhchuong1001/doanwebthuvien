@@ -24,20 +24,16 @@ include("connect.php");
             <a href="homepage.php">TRANG CHỦ</a>
             </li>
             <li> 
-            <a href="#">SÁCH GIÁO TRÌNH</a>
+            <a href="SGT.html">SÁCH GIÁO TRÌNH</a>
             <div class="dropdown">
                 <a href="#newcolection">Giáo trình đại cương</a>
                 <a href="#">Giáo trình phổ biến</a>
-                <a href="#">Giáo trình</a>
-                <a href="#">Giáo trình</a>
             </div>
             </li>
             <li>
                 <a href="SACHTC.html">TRA CỨU</a>
                 <div class="dropdown">
-                    <a href="#">Tra cứu Opac</a>
-                    <a href="#">Tra cứu môn học</a>
-                    <a href="#">Tra cứu tài liệu nội sinh</a>
+                    <a href="TCMH.html">Tra cứu môn học</a>
                     <a href="#">Tra cứu luận văn</a>    
             </div>
             </li>
