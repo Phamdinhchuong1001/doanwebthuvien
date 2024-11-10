@@ -47,10 +47,8 @@ include("connect.php");
      
           <!------------------------------------------------------------ bestseller section-------------------------------------------------------->
           <section class="products" id="sale">
-
             <h1 class="heading"><span>Sách hay mỗi tuần</span></h1>
             <div class="box-container">
-                
                 <div class="box">
                     <div class="image">
                         <img src="../image/index/Kynangbanhanghieuqua.jpeg">

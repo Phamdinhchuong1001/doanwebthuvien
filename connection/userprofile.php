@@ -45,7 +45,9 @@ include("connect.php");
     
     <div class="containers">
         <div class="profile-header">
-            <div class="profile-image">CP</div>
+            <div class="profile-image">
+            <img src="../image/userprofile/user.webp">
+            </div>
             <div class="profile-info">
                 <div class="profile-name">
                 <?php 
@@ -368,4 +370,14 @@ include("connect.php");
         width: 16px;
         height: 16px;
     }
+
+
+
+    .containers .profile-header .profile-image img{
+	height: 5rem;
+	width: 5rem;
+	margin-right: 0rem;
+	border-radius: 50%;
+	object-fit: cover;
+}
 </style>

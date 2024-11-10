@@ -327,6 +327,7 @@ section{
 .products .box-container .box:hover .image .icons{
 	bottom: 0;
 	
+	
 }
 .products .box-container .box:hover .image .icons a{
 	height: 2.5rem;
@@ -348,22 +349,7 @@ section{
 	font-size: 1.5rem;
 	color:#24262b;
 }
-.products .box-container .box .content .price{
-	font-size: 1.2rem;
-	color:#24262b;
-	font-weight: bolder;
-	padding-top:1rem ;
-}
-.products .box-container .box .content .price span{
-	font-size: 1.5rem;
-	color: #999;
-	font-weight: lighter;
-	text-decoration:line-through ;
-}
 
-.products .heading span{
-	color: #fff;
-}
 
 /**********************************************************************************product**********************************************************************************/
 
