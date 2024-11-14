@@ -4,12 +4,12 @@
   <table class="table ">
     <thead>
       <tr>
-        <th class="text-center">S.N.</th>
+        <th class="text-center">STT</th>
         <th class="text-center">Product Image</th>
         <th class="text-center">Product Name</th>
         <th class="text-center">Product Description</th>
         <th class="text-center">Category Name</th>
-        <th class="text-center">Unit Price</th>
+        <th class="text-center">Quantity</th>
         <th class="text-center" colspan="2">Action</th>
       </tr>
     </thead>
