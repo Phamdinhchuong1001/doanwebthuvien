@@ -15,7 +15,7 @@ if(isset($_POST['signUp'])){
      $checkEmail="SELECT * From users where email='$email'";
      $result=$conn->query($checkEmail);
      if($result->num_rows>0){
-        echo "Email Address Already Exists !";
+        echo "Email đã tồn tại !";
      }
      else{
         $insertQuery="INSERT INTO users(firstName,lastName,email,password,nganh,khoa,mssv)
@@ -28,7 +28,6 @@ if(isset($_POST['signUp'])){
             }
      }
    
-
 }
 
 if(isset($_POST['signIn'])){
@@ -42,11 +41,16 @@ if(isset($_POST['signIn'])){
     session_start();
     $row=$result->fetch_assoc();
     $_SESSION['email']=$row['email'];
-    header("Location: homepage.php");
+    $_SESSION['role'] = $row['role']; // Lưu vai trò vào session
+    if ($_SESSION['role'] === 'admin') {
+        header("Location: ../admin_panel/indexAdmin.php");
+    } else {
+        header("Location: homepage.php"); // Hoặc trang khác cho user
+    }
     exit();
    }
    else{
-    echo "Not Found, Incorrect Email or Password";
+    echo "không tìm thấy người dùng, sai email hoặc mật khẩu";
    }
 
 }
