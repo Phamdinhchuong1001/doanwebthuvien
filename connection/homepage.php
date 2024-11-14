@@ -193,7 +193,7 @@ include("connect.php");
                 <div class="image">
                     <img src="../image/index/Conhietvatlydaicuong.png">
                     <div class="icons">
-                        <a class="cart-btn" onclick="addToCart('Tin học đại cương', '../image/index/Tinhocdaicuong.jpg'); return false;">Thêm Sách</a>
+                        <a class="cart-btn" onclick="addToCart('Cơ nhiệt vật lý đại cương', '../image/index/Conhietvatlydaicuong.png'); return false;">Thêm Sách</a>
                         <a href="Chitietsach.html" class="fas fa-share"></a>
                     </div>
                 </div>
@@ -205,7 +205,7 @@ include("connect.php");
                 <div class="image">
                     <img src="../image/index/Giaoduchocdaicuong.png">
                     <div class="icons">
-                        <a class="cart-btn" onclick="addToCart('Tin học đại cương', '../image/index/Tinhocdaicuong.jpg'); return false;">Thêm Sách</a>
+                        <a class="cart-btn" onclick="addToCart('Giáo dục học đại cương', '../image/index/Giaoduchocdaicuong.png'); return false;">Thêm Sách</a>
                         <a href="Chitietsach.html" class="fas fa-share"></a>
                     </div>
                 </div>
@@ -217,7 +217,7 @@ include("connect.php");
                 <div class="image">
                     <img src="../image/index/Giaitich.png">
                     <div class="icons">
-                        <a class="cart-btn" onclick="addToCart('Tin học đại cương', '../image/index/Tinhocdaicuong.jpg'); return false;">Thêm Sách</a>
+                        <a class="cart-btn" onclick="addToCart('Giải tích', '../image/index/Giaitich.png'); return false;">Thêm Sách</a>
                         <a href="Chitietsach.html" class="fas fa-share"></a>
                     </div>
                 </div>
