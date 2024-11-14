@@ -11,8 +11,8 @@
       </tr>
     </thead>
     <?php
-      include_once "../dbthuvien.php";
-      $sql="SELECT * from user where isAdmin=0";
+      include_once "../config/dbconnect.php";
+      $sql="SELECT * from users where isAdmin=0";
       $result=$conn-> query($sql);
       $count=1;
       if ($result-> num_rows > 0){
