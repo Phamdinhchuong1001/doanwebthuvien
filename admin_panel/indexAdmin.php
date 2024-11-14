@@ -14,16 +14,18 @@
         <?php
             include "./adminHeader.php";
             include "./sidebar.php";
-           
-            include_once "./config/dbconnect.php";
+
+            include_once "./config/ketnoi.php";
+
         ?>
 
     <div id="main-content" class="container allContent-section py-4">
         <div class="row">
             <div class="col-sm-3">
                 <div class="card">
+                <a href="#customers"  onclick="showCustomers()" >
                     <i class="fa fa-users  mb-2" style="font-size: 70px;"></i>
-                    <h4 style="color:white;">Total Users</h4>
+                    <h4 style="color:white;">Danh Sách</h4>
                     <h5 style="color:white;">
                     <?php
                         $sql="SELECT * from users where isAdmin=0";
@@ -37,27 +39,15 @@
                         }
                         echo $count;
                     ?></h5>
+
                 </div>
             </div>
             <div class="col-sm-3">
             <div class="card">
+            <a href="#products"  onclick="showProductItems()">
                     <i class="fa fa-th mb-2" style="font-size: 70px;"></i>
-                    <h4 style="color:white;">Total Products</h4>
-                    <h5 style="color:white;">
-                    <?php
-                       
-                       $sql="SELECT * from product";
-                       $result=$conn-> query($sql);
-                       $count=0;
-                       if ($result-> num_rows > 0){
-                           while ($row=$result-> fetch_assoc()) {
-                   
-                               $count=$count+1;
-                           }
-                       }
-                       echo $count;
-                   ?>
-                   </h5>
+                    <h4 style="color:white;">Sản Phẩm</h4>
+                    <h5 style="color:white;"></h5>
                 </div>
             </div>
         </div>

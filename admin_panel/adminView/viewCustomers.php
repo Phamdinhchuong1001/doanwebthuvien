@@ -1,17 +1,17 @@
 <div >
-  <h2>All Customers</h2>
+  <h2>Danh sách sinh viên</h2>
   <table class="table ">
     <thead>
       <tr>
         <th class="text-center">STT</th>
-        <th class="text-center">Username </th>
+        <th class="text-center">Họ và tên </th>
         <th class="text-center">Email</th>
-        <th class="text-center">Contact Number</th>
-        <th class="text-center">Joining Date</th>
+        <th class="text-center">MSSV</th>
+        <th class="text-center">Ngành học</th>
       </tr>
     </thead>
     <?php
-      include_once "../config/dbconnect.php";
+      include_once "../config/ketnoi.php";
       $sql="SELECT * from users where isAdmin=0";
       $result=$conn-> query($sql);
       $count=1;
@@ -21,10 +21,10 @@
     ?>
     <tr>
       <td><?=$count?></td>
-      <td><?=$row["first_name"]?> <?=$row["last_name"]?></td>
+      <td><?=$row["firstName"]?> <?=$row["lastName"]?></td>
       <td><?=$row["email"]?></td>
-      <td><?=$row["contact_no"]?></td>
-      <td><?=$row["registered_at"]?></td>
+      <td><?=$row["mssv"]?></td>
+      <td><?=$row["nganh"]?></td>
     </tr>
     <?php
             $count=$count+1;
@@ -33,3 +33,4 @@
     }
     ?>
   </table>
+  
