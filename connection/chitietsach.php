@@ -1,3 +1,8 @@
+<?php
+session_start();
+include("connect.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -281,15 +286,15 @@
         <div class="icons">
             <a href="search.html" class="fas fa-search"></a>
             <a href="cart.html" class="fas fa-shopping-cart"></a>
-            <a href="userprofile.html" class="fas fa-user"></a>
+            <a href="userprofile.php" class="fas fa-user"></a>
         </div>
     </div>
         <!----content---->
         <div class="DetailProcontainer">
         <div class="Prodetail">
-            <a href="../image/index/Pic_Chitietsach/Proimg.png" target="_blank"> 
+            <a href="../image/index/Kynangbanhanghieuqua.jpeg" target="_blank"> 
                 <div class="Proimg">
-                    <img src="../image/index/Pic_Chitietsach/Proimg.png" style="margin: auto; height: auto; width: 370px; border-radius: 15px ; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);" >
+                    <img src="../image/index/Kynangbanhanghieuqua.jpeg" style="margin: auto; height: auto; width: 370px; border-radius: 15px ; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);" >
                 </div>
             </a>
             
@@ -325,7 +330,7 @@
 
             <div class="Proinfo">
                 <div class="Booktitle">
-                    PDCA - Công cụ lập kế hoạch hiệu quả
+                Kỹ năng bán hàng hiệu quả
                 </div>
                 <div class="like-view">
                     <div class="like">
@@ -335,7 +340,7 @@
                     </div>
                     <div class="view">
                         <img src="../image/index/Pic_Chitietsach/reading.png" style="width: 26px; height: 26px; margin-right: 6px;">
-                        <a style="margin-right: 5px ;">2000</a> 
+                        <a style="margin-right: 5px ;">240</a> 
                         <span>người xem</span>
                     </div>
                 </div>
@@ -384,16 +389,9 @@
                     });
                   </script>
                   <div class="OptPro">
-                    <div class="Docsach" >
-                        <a href="#">
-                        <span>Đọc Sách</span>
-                        <img src="../image/index/Pic_Chitietsach/readbook.png" style="width: 26px; height: 26px;">
-                         </a>
-                    </div>
                     <div class="nghesach">
-                        <a href="#">
+                    <a class="cart-btn" onclick="addToCart('Kỹ năng bán hàng hiệu quả', '../image/index/Kynangbanhanghieuqua.jpeg'); return false;">
                         <span>Thêm sách</span>
-                        <!--img src="../image/index/Pic_Chitietsach/listening.png" style="width: 26px; height: 26px;"-->
                         </a>
                     </div>
                 </div>
@@ -529,5 +527,6 @@
                     </div>
             </div>
         </div>
+        <script src="../js/addCart.js"></script>
 </body>
 </html>
